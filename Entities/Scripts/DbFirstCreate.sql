@@ -86,6 +86,3 @@ FROM    database_first.tbl_OtherTableNotAccessibleToEntityFramework
     EF CLI commands need to include '--context <Name>' as in this context there are multiple FluentApi's  
     dotnet ef migrations add TestForDetectedMigrations --context DatabaseFirstDbContext   
 */
-
-SELECT  *
-FROM    __EFMigrationsHistory

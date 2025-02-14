@@ -60,6 +60,7 @@ dotnet ef dbcontext scaffold "Server=tcp:localhost,1433;Initial Catalog=Database
 
 ## Code First with Database First
 
+TODO:
 
 ## Check Constraints
 

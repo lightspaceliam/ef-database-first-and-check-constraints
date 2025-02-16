@@ -120,6 +120,8 @@ To add to this I just wanted to demonstrate how you can configure Entity Framewo
 
 From this:
 
+From this:
+
 ```sql
 CREATE TABLE database_first.tbl_CareTeams (
     iCareTeamID INT IDENTITY(1, 1) NOT NULL,
@@ -128,7 +130,8 @@ CREATE TABLE database_first.tbl_CareTeams (
 );
 ```
 
-to this in C#
+
+to this in C#:
 
 ```c#
 [DataContract]

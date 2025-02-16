@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Entities;
 using Entities.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -54,5 +55,28 @@ foreach (var patient in patients)
 {
 	Console.WriteLine($"Patient: {patient.FullName}, in care team: {patient.CareTeam.Name}");
 }
+
+var firstPatient = patients
+	.FirstOrDefault();
+
+if (firstPatient?.Id is not null)
+{
+	var observation = new Observation
+	{
+		PatientId = firstPatient.Id,
+		Status = ObservationStatus.Preliminary,
+		Value = 75m,
+		Unit = "bpm"
+	};
+	context.Observations.Add(observation);
+	await context.SaveChangesAsync();
+	
+	Console.WriteLine($"{nameof(Observation)}/{observation.Id} Value: {observation.Value}): ");
+}
+else
+{
+	Console.WriteLine("There are no patients");
+}
+
 
 Console.WriteLine("\nHello, brief demo to migrating to Entity Framework!");

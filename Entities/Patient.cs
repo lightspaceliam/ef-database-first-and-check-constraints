@@ -27,9 +27,6 @@ public class Patient : EntityBase
     [StringLength(150, ErrorMessage = "Last name exceeds {1} characters")]
     public string LastName { get; set; } = null!;
     
-
-    // [ForeignKey("iCareTeamID")]
-    // [InverseProperty("tbl_Patients")]
     [Column("iCareTeamID")]
     [DataMember]
     [Required(ErrorMessage = "Care team is required")]

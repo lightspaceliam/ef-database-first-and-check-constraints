@@ -9,5 +9,8 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8" />
+
+        <!-- https://www.nuget.org/packages/EFCore.CheckConstraints -->
+        <PackageReference Include="EFCore.CheckConstraints" Version="8.0.1" />
     </ItemGroup>
 </Project>

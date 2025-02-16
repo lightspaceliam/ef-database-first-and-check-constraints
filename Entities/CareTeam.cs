@@ -18,7 +18,6 @@ public class CareTeam : EntityBase
     [Required(ErrorMessage = "Name is required.")]
     [StringLength(150, ErrorMessage = "Name exceeds {1} characters")]
     public string Name { get; set; } = null!;
-
-    // [InverseProperty("iCareTeam")]
+    
     public virtual ICollection<Patient> Patients { get; set; } = new List<Patient>();
 }

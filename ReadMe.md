@@ -118,6 +118,8 @@ Both the Patient and CareTeam tables implemented naming conventions I have exper
 
 To add to this I just wanted to demonstrate how you can configure Entity Framework to translate schema, table names and column names to something more contemporary with out even needing to make hard changes. Letting Entity Framework do all the heavy lifting.
 
+From this:
+
 ```sql
 CREATE TABLE database_first.tbl_CareTeams (
     iCareTeamID INT IDENTITY(1, 1) NOT NULL,
@@ -126,7 +128,7 @@ CREATE TABLE database_first.tbl_CareTeams (
 );
 ```
 
-to C#
+to this in C#
 
 ```c#
 [DataContract]
